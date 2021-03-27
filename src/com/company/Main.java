@@ -36,8 +36,20 @@ public class Main {
     }
 
     public static List<Question> initQuestions() {
-        Question q1 = new Question("Whats ur name?", Arrays.asList("Aryaman", "Navya"));
-        Question q2 = new Question("How old are u?", Arrays.asList("10", "11", "12", "13"));
+        Question q1 = new Question("Whats types of charities are you interested in?",
+            Arrays.asList("saving lives", "prevention of poverty", "overseas aid",
+                "education", "community development",
+                "general charitable purpose", "disability", "animal welfare"));
+        Question q2 = new Question("What religion would you?"
+            + "prefer the charity to be affiliated with?",
+            Arrays.asList("secular", "christian"));
+        Question q3 = new Question("Who would you like the charity to be helping?",
+            Arrays.asList("physically unwell", "children", "mankind", "refugees",
+                "internationals", "mentally unwell"));
+        Question q4 = new Question("Would you like the charity to be small, medium-sized"
+            + "or big?", Arrays.asList("small", "medium", "big"));
+        Question q5 = new Question("How long would you like the charity to have existed for",
+            Arrays.asList("0-24", "50-74", "100 - 124", "175-199"));
         return Arrays.asList(q1, q2);
     }
 
