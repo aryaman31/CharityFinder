@@ -3,16 +3,14 @@ package com.company;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
         List<Question> questions = initQuestions();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        List<String> wantedAttributes = new ArrayList<>();
+        Set<String> wantedAttributes = new HashSet<>();
 
         for (Question q : questions) {
             StringBuilder s = displayQuestion(q);
@@ -26,13 +24,26 @@ public class Main {
             }
             wantedAttributes.add(q.getOptions().get(Integer.parseInt(inp) - 1));
         }
-        System.out.println(wantedAttributes);
+
+        List<Charity> charities = initCharities();
+        List<Pair<Charity, Integer>> out = new ArrayList<>();
+
+        for (Charity c : charities) {
+            Set<String> charityAttributes = c.convertAttributesToSet();
+            charityAttributes.containsAll(wantedAttributes);
+        }
+
     }
 
     public static List<Question> initQuestions() {
         Question q1 = new Question("Whats ur name?", Arrays.asList("Aryaman", "Navya"));
         Question q2 = new Question("How old are u?", Arrays.asList("10", "11", "12", "13"));
         return Arrays.asList(q1, q2);
+    }
+
+    public static List<Charity> initCharities() {
+        // TODO: do it;
+        return null;
     }
 
     public static StringBuilder displayQuestion(Question q) {

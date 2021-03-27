@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Question {
 
-    final List<String> options;
-    final String question;
+    final private List<String> options;
+    final private String question;
 
     public Question(String question, List<String> options) {
         this.options = options;
