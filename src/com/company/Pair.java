@@ -1,11 +1,13 @@
 package com.company;
 
-public class Pair<T, S> {
+import java.util.Comparator;
 
-    private T first;
-    private S second;
+public class Pair implements Comparable<Pair> {
 
-    public Pair(T first, S second) {
+    private Charity first;
+    private Integer second;
+
+    public Pair(Charity first, Integer second) {
         this.first = first;
         this.second = second;
     }
@@ -15,21 +17,24 @@ public class Pair<T, S> {
         this.second = null;
     }
 
-    public T getFirst() {
+    public Charity getFirst() {
         return first;
     }
 
-    public S getSecond() {
+    public Integer getSecond() {
         return second;
     }
 
-    public void setFirst(T first) {
+    public void setFirst(Charity first) {
         this.first = first;
     }
 
-    public void setSecond(S second) {
+    public void setSecond(Integer second) {
         this.second = second;
     }
 
-
+    @Override
+    public int compareTo(Pair o) {
+        return second - o.getSecond();
+    }
 }
