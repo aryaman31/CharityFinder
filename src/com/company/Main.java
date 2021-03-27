@@ -16,7 +16,7 @@ public class Main {
 
         for (Question q : questions) {
             StringBuilder s = displayQuestion(q);
-            s.deleteCharAt(s.length() - 1); s.deleteCharAt(s.length() - 1);
+            s.deleteCharAt(s.length() - 1);
             System.out.println(s.toString());
 
             String inp = getInput(reader);
