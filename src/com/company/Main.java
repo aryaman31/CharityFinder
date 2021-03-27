@@ -37,16 +37,16 @@ public class Main {
         }
 
         Collections.sort(out);
+        Collections.reverse(out);
 
         StringBuilder sb = new StringBuilder();
-        sb.append("We have found some charities for YOU!");
+        sb.append("We have found some charities for YOU!\n");
         int c = 1;
         for (Pair p : out) {
-            sb.append(c).append(") ").append(p.getFirst().getName());
+            sb.append(c).append(") ").append(p.getFirst().getName()).append("\n");
             c++;
         }
-
-
+        System.out.println(sb.toString());
 
     }
 
@@ -57,8 +57,9 @@ public class Main {
     }
 
     public static List<Charity> initCharities() {
-        // TODO: do it;
-        return null;
+        Charity c1 = new Charity("Ur Mom Foundation", Arrays.asList("Navya", "10", "12"));
+        Charity c2 = new Charity("Omae wa shinderou", Arrays.asList("NANI", "Navya"));
+        return Arrays.asList(c2, c1);
     }
 
     public static StringBuilder displayQuestion(Question q) {
