@@ -26,12 +26,27 @@ public class Main {
         }
 
         List<Charity> charities = initCharities();
-        List<Pair<Charity, Integer>> out = new ArrayList<>();
+        List<Pair> out = new ArrayList<>();
 
         for (Charity c : charities) {
             Set<String> charityAttributes = c.convertAttributesToSet();
-            charityAttributes.containsAll(wantedAttributes);
+            charityAttributes.retainAll(wantedAttributes);
+            if (charityAttributes.size() != 0) {
+                out.add(new Pair(c, charityAttributes.size()));
+            }
         }
+
+        Collections.sort(out);
+        Collections.reverse(out);
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("We have found some charities for YOU!\n");
+        int c = 1;
+        for (Pair p : out) {
+            sb.append(c).append(") ").append(p.getFirst().getName()).append("\n");
+            c++;
+        }
+        System.out.println(sb.toString());
 
     }
 
@@ -54,7 +69,7 @@ public class Main {
     }
 
     public static List<Charity> initCharities() {
-        // TODO: do it;
+        //TODO: finish
         return null;
     }
 
