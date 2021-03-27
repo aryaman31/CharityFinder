@@ -7,7 +7,7 @@ public class Question {
     final List<String> options;
     final String question;
 
-    public Question(List<String> options, String question) {
+    public Question(String question, List<String> options) {
         this.options = options;
         this.question = question;
     }
