@@ -1,0 +1,12 @@
+Cancer Research UK, physically unwell, big, saving lives, education, secular, 0-24
+British Heart Foundation, physically unwell, big, saving lives, secular, 50-74
+Macmillan Cancer Support, physically unwell, big, saving lives, education, prevention of poverty, secular, 150-174
+Great Ormond Street Hospital Charity, children, big, saving lives, secular 50-74
+Royal National Lifeboat Institution, mankind, big, saving lives, secular, 175-199
+British Red Cross, refugees, big, general charitable purposes, education, saving lives, disability, prevention of poverty, overseas aid, secular, 150-174
+Samaritans, mentally unwell, big, saving lives, education, secular, 50-74
+Save the Children, children, big, general charitable purposes, saving lives, prevention of poverty, overseas aid, community development, secular, 100-124
+Royal Society for the Prevention of Cruelty to Animals, animals, big, animal welfare, secular, 175-199
+Christian Aid, internationals, big, general charitable purposes, education, saving lives, prevention of poverty, overseas aid, christian, 75-99
+Sightsavers, children, big, education, saving lives, disability, prevention of poverty, overseas aid, community development, secular, 50-74
+National Society for the Prevention of cruelty to children, children, big, general charitable purpose, education, secular, 175-199
